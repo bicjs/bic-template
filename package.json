@@ -1,0 +1,54 @@
+{
+  "name": "@raypatterson/bic-template",
+  "description": "Bic Template",
+  "version": "0.0.0-1",
+  "author": {
+    "name": "Ray Patterson",
+    "email": "github.raypatterson@gmail.com"
+  },
+  "bugs": "https://github.com/raypatterson/bic-template/issues",
+  "contributors": [
+    {
+      "name": "Ray Patterson",
+      "email": "github.raypatterson@gmail.com"
+    }
+  ],
+  "dependencies": {
+    "@raypatterson/bic-logger": "file:../bic-logger",
+    "fs-extra": "^0.24.0",
+    "jade": "^1.11.0",
+    "lodash": "^3.10.0",
+    "rsvp": "^3.0.20"
+  },
+  "devDependencies": {
+    "blue-tape": "^0.1.10",
+    "bump-cli": "^1.1.3",
+    "faucet": "0.0.1",
+    "fixpack": "^2.2.0"
+  },
+  "engines": {
+    "node": "0.12.7",
+    "npm": "2.12.1"
+  },
+  "homepage": "https://github.com/raypatterson/bic-logger#readme",
+  "keywords": [
+    "bic",
+    "website",
+    "framework",
+    "jade",
+    "template",
+    "renderer"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": "bitbucket:raypatterson/bic-template",
+  "scripts": {
+    "commit:pre": "git add -A && git commit -m 'Prerelease' && git push",
+    "publish:pre": "npm publish --access=public",
+    "release:major": "fixpack && bump .package.json --major",
+    "release:minor": "fixpack && bump .package.json --minor",
+    "release:patch": "fixpack && bump .package.json --patch",
+    "release:pre": "fixpack && bump .package.json --pre && npm run commit:pre && npm run publish:pre",
+    "test": "faucet"
+  }
+}
