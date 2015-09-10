@@ -1,12 +1,12 @@
 {
-  "name": "@raypatterson/bic-template",
+  "name": "@flickmy/bic-template",
   "description": "Bic Template",
   "version": "0.0.0-1",
   "author": {
     "name": "Ray Patterson",
     "email": "github.raypatterson@gmail.com"
   },
-  "bugs": "https://github.com/raypatterson/bic-template/issues",
+  "bugs": "https://github.com/flickmy/bic-template/issues",
   "contributors": [
     {
       "name": "Ray Patterson",
@@ -14,7 +14,7 @@
     }
   ],
   "dependencies": {
-    "@raypatterson/bic-logger": "file:../bic-logger",
+    "@flickmy/bic-logger": "file:../bic-logger",
     "fs-extra": "^0.24.0",
     "jade": "^1.11.0",
     "lodash": "^3.10.0",
@@ -30,7 +30,7 @@
     "node": "0.12.7",
     "npm": "2.12.1"
   },
-  "homepage": "https://github.com/raypatterson/bic-logger#readme",
+  "homepage": "https://github.com/flickmy/bic-logger#readme",
   "keywords": [
     "bic",
     "website",
@@ -41,7 +41,7 @@
   ],
   "license": "MIT",
   "main": "index.js",
-  "repository": "bitbucket:raypatterson/bic-template",
+  "repository": "github:raypatterson/bic-template",
   "scripts": {
     "commit:pre": "git add -A && git commit -m 'Prerelease' && git push",
     "publish:pre": "npm publish --access=public",

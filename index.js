@@ -6,7 +6,7 @@ var path = require('path');
 var jade = require('jade');
 
 // Logger
-var logger = require('@raypatterson/bic-logger').get('template');
+var logger = require('@flickmy/bic-logger').get('template');
 
 var content;
 
