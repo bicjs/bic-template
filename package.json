@@ -27,8 +27,8 @@
     "fixpack": "^2.2.0"
   },
   "engines": {
-    "node": "0.12.7",
-    "npm": "2.12.1"
+    "node": "4.0.0",
+    "npm": "2.14.2"
   },
   "homepage": "https://github.com/flickmy/bic-logger#readme",
   "keywords": [
