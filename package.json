@@ -7,15 +7,17 @@
     "email": "github.raypatterson@gmail.com"
   },
   "bugs": "https://github.com/flickmy/bic-template/issues",
-  "contributors": [
-    {
-      "name": "Ray Patterson",
-      "email": "github.raypatterson@gmail.com"
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
     }
-  ],
+  },
+  "contributors": [{
+    "name": "Ray Patterson",
+    "email": "github.raypatterson@gmail.com"
+  }],
   "dependencies": {
-    "@flickmy/bic-logger": "file:../bic-logger",
-    "fs-extra": "^0.24.0",
+    "fs-extra": "^0.26.2",
     "jade": "^1.11.0",
     "lodash": "^3.10.0",
     "rsvp": "^3.0.20"
@@ -23,27 +25,31 @@
   "devDependencies": {
     "blue-tape": "^0.1.10",
     "bump-cli": "^1.1.3",
+    "cz-conventional-changelog": "^1.1.4",
     "faucet": "0.0.1",
-    "fixpack": "^2.2.0"
+    "fixpack": "^2.2.0",
+    "npm-link-shared": "^0.2.0"
   },
   "engines": {
-    "node": "4.1.x",
-    "npm": "2.14.x"
+    "node": "5.0.x",
+    "npm": "3.3.x"
   },
   "homepage": "https://github.com/flickmy/bic-logger#readme",
   "keywords": [
     "bic",
-    "website",
     "framework",
     "jade",
+    "renderer",
     "template",
-    "renderer"
+    "website"
   ],
   "license": "MIT",
   "main": "index.js",
   "repository": "github:raypatterson/bic-template",
   "scripts": {
     "commit:pre": "git add -A && git commit -m 'Prerelease' && git push",
+    "link": "npm-link-shared .. . bic-logger",
+    "postinstall": "npm run link",
     "publish:pre": "npm publish --access=public",
     "release:major": "fixpack && bump .package.json --major",
     "release:minor": "fixpack && bump .package.json --minor",
